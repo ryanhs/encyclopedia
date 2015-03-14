@@ -41,7 +41,7 @@ data.walk(function(k, v){
 });
 </code>
 
-### getLength
+### getLength()
 <code>var max = 10;
 for(var i = 0; i < max; i++){
 	data.set(i, i);
@@ -54,3 +54,13 @@ in this version there is 4 basic method
 
 #### author:
 - ryan hs <mr.ryansilalahi@gmail.com>
+
+
+
+###### need a lot to be improved
+in this early development i just focus on main idea, separated big object..
+i think there is a lot to be improved like:
+
+- walk escape (like return false then walk stop)
+- has(k) // i think its just (typeof get(k) != 'undefined')
+- etc..

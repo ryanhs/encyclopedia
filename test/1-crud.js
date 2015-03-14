@@ -26,3 +26,28 @@ exports["unset"] = function(test){
 	test.done();
 }
 
+exports["walk"] = function(test){
+	var data = enc();
+	
+	var max = 10;
+	for(var i = 0; i < max; i++){
+		data.set(i, i);
+	}
+	
+	var all_good = true;
+	var i = 0;
+	data.walk(function(k, v){
+		i++;
+		
+		// we put k = v, lets check it
+		if(k != v){
+			all_good = false;
+		}
+	});
+	
+	test.ok(all_good);
+	test.ok(i == max);
+	
+	test.done();
+}
+
