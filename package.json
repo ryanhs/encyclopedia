@@ -1,0 +1,21 @@
+{
+  "name": "encyclopedia",
+  "version": "0.0.1",
+  "description": "mask big object, i make this library to make a big object but in nodejs",
+  "main": "lib/encyclopedia.js",
+  "scripts": {
+    "test": "nodeunit test"
+  },
+  "keywords": [
+    "big",
+    "object",
+    "dictionary"
+  ],
+  "author": "ryan hs <mr.ryansilalahi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "nodeunit": "0.9.0"
+  }
+}
