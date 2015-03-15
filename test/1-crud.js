@@ -15,13 +15,17 @@ exports["set & get"] = function(test){
 }
 
 
-exports["unset"] = function(test){
+exports["has & unset"] = function(test){
 	var data = enc();
 	
 	data.set(k, v);
+	
+	test.ok(data.has(k));
+	
 	data.unset(k);
 	
 	test.notEqual(data.get(k), v);
+	test.ok(! data.has(k));
 	
 	test.done();
 }
@@ -46,7 +50,30 @@ exports["walk"] = function(test){
 	});
 	
 	test.ok(all_good);
-	test.ok(i == max);
+	test.equal(i, max);
+	
+	test.done();
+}
+
+exports["walk interupt"] = function(test){
+	var data = enc();
+	
+	var max = 10;
+	for(var i = 0; i < max; i++){
+		data.set(i, i);
+	}
+	
+	var interupt_on = 5;
+	var i = 0;
+	data.walk(function(k, v){
+		i++;
+		
+		if (i == interupt_on){
+			return false;
+		}
+	});
+	
+	test.equal(i, interupt_on);
 	
 	test.done();
 }

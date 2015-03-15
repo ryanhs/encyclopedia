@@ -24,6 +24,13 @@ data.get('some key'); // return 'some value'
 ### get(k)
 <code>console.log( data.get('some key') );</code>
 
+### has(k)
+<code>if(data.has('some key')){
+	console.log('gotcha!');
+}else{
+	console.log('not found!');
+}</code>
+
 ### unset(k, v)
 <code>data.set('foo', 'bar'); // foo => bar
 data.unset('foo'); // foo deleted 
@@ -40,6 +47,8 @@ data.walk(function(k, v){
 	console.log(k + ' => ' + v);
 });
 </code>
+
+note: if callback return FALSE it will break the walk, otherwise walk will continue..
 
 ### getLength()
 <code>var max = 10;
@@ -59,8 +68,4 @@ in this version there is 4 basic method
 
 ###### need a lot to be improved
 in this early development i just focus on main idea, separated big object..
-i think there is a lot to be improved like:
-
-- walk escape (like return false then walk stop)
-- has(k) // i think its just (typeof get(k) != 'undefined')
-- etc..
+i think there is a lot to be improved. you are very welcome to contribute :-)
