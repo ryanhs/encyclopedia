@@ -1,6 +1,6 @@
 {
   "name": "encyclopedia",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mask big object, i make this library to make a big object but in nodejs",
   "main": "lib/encyclopedia.js",
   "scripts": {
