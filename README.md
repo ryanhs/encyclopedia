@@ -69,8 +69,6 @@ note: if callback return FALSE it will break the walk, otherwise walk will conti
 	console.log('now length: ' + data.getLength()); // 10
 ```
 
-in this version there is 4 basic method
-
 #### author:
 - ryan hs <mr.ryansilalahi@gmail.com>
 
