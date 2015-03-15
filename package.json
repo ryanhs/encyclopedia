@@ -11,6 +11,10 @@
     "object",
     "dictionary"
   ],
+  "repository" : {
+  	"type" : "git", 
+  	"url" : "https://github.com/ryanhs/encyclopedia.git"
+  },
   "author": "ryan hs <mr.ryansilalahi@gmail.com>",
   "license": "MIT",
   "dependencies": {
