@@ -11,10 +11,10 @@ with 1000 properties each object.
 
 ## getting started
 
-<code>var encyclopedia = require('encyclopedia');
-var data = encyclopedia(); // create new instance
-
-data.set('some key', 'some value');
+<code>var encyclopedia = require('encyclopedia');<br/>
+var data = encyclopedia(); // create new instance<br/>
+<br/>
+data.set('some key', 'some value');<br/>
 data.get('some key'); // return 'some value'
 </code>
 
@@ -25,37 +25,37 @@ data.get('some key'); // return 'some value'
 <code>console.log( data.get('some key') );</code>
 
 ### has(k)
-<code>if(data.has('some key')){
-	console.log('gotcha!');
-}else{
-	console.log('not found!');
+<code>if(data.has('some key')){<br/>
+	console.log('gotcha!');<br/>
+}else{<br/>
+	console.log('not found!');<br/>
 }</code>
 
 ### unset(k, v)
-<code>data.set('foo', 'bar'); // foo => bar
-data.unset('foo'); // foo deleted 
+<code>data.set('foo', 'bar'); // foo => bar<br/>
+data.unset('foo'); // foo deleted <br/>
 data.get('foo') // undefined
 </code>
 
 ### walk(callback(k, v){ })
-<code>var max = 10;
-for(var i = 0; i < max; i++){
-	data.set(i, i);
-}
-
-data.walk(function(k, v){
-	console.log(k + ' => ' + v);
+<code>var max = 10;<br/>
+for(var i = 0; i < max; i++){<br/>
+	data.set(i, i);<br/>
+}<br/>
+<br/>
+data.walk(function(k, v){<br/>
+	console.log(k + ' => ' + v);<br/>
 });
 </code>
 
 note: if callback return FALSE it will break the walk, otherwise walk will continue..
 
 ### getLength()
-<code>var max = 10;
-for(var i = 0; i < max; i++){
-	data.set(i, i);
-}
-
+<code>var max = 10;<br/>
+for(var i = 0; i < max; i++){<br/>
+	data.set(i, i);<br/>
+}<br/>
+<br/>
 console.log('now length: ' + data.getLength()); // 10
 </code>
 
