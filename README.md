@@ -8,6 +8,15 @@ the logic behind this is i make separated object for masking a big object.
 example you need to store 100.000 properties and this library is make 100 object
 with 1000 properties each object.
 
+default per object is 1 million, but you can set it when create new instance.
+example:
+
+```javascript
+	var encyclopedia = require('encyclopedia');
+	var data = encyclopedia(1000); // 1000 property per object
+```
+
+
 
 ## getting started
 
